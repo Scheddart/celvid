@@ -49,9 +49,12 @@ export default function HeroVideo() {
         playsInline
         preload="auto"
         poster={`${BASE}/hero-poster.jpg`}
+        onError={(e) => console.error('Hero video error:', e.currentTarget.error)}
+        onStalled={() => console.warn('Hero video stalled')}
+        onLoadedData={() => console.log('Hero video loaded')}
       >
-        <source src={`${BASE}/hero.webm`} type="video/webm" />
         <source src={`${BASE}/hero.mp4`} type="video/mp4" />
+        <source src={`${BASE}/hero.webm`} type="video/webm" />
       </video>
 
       {/* Seta de scroll */}

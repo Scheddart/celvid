@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const isProd = process.env.NODE_ENV === 'production'
-const basePath = isProd ? '/cor-e-lar-video' : ''
+const basePath = isProd ? '/celvid' : ''
 
 const nextConfig = {
   output: 'export',
